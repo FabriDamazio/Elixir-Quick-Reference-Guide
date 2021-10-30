@@ -4,6 +4,7 @@ Elixir through code samples
 ## Table of Contents
 * [Hello World](#hello-world)
 * [Basic Data Types](#basic-data-types)
+* [Arithmetic Operations](#arithmetic-operations)
 
 ---
 
@@ -26,5 +27,18 @@ Elixir through code samples
 true      # boolean (are also atoms, is_atom(true) -> true)
 :foo      # atom (constant whose name is its value)
 "Hello"   # string
+```
+[back to top](#table-of-contents)
+
+---
+
+### Arithmetic Operations
+```elixir
+2+2       # addition
+3-1       # subtraction
+3*5       # multiplication
+10/3      # division (always return a float)
+div(10,2) # integer division
+rem(10,3) # modulo (division remainder)
 ```
 [back to top](#table-of-contents)
