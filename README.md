@@ -23,8 +23,8 @@ Elixir through code samples
 0x1F      # hexadecimal
 3.14      # float
 1.0e-10   # float (support e for exponencial values)
-true      # booleans (are also atoms, is_atom(true) -> true)
+true      # boolean (are also atoms, is_atom(true) -> true)
 :foo      # atom (constant whose name is its value)
-"Hello"   # strings
+"Hello"   # string
 ```
 [back to top](#table-of-contents)
