@@ -5,6 +5,7 @@ Elixir through code samples
 * [Hello World](#hello-world)
 * [Basic Data Types](#basic-data-types)
 * [Arithmetic Operations](#arithmetic-operations)
+* [Boolean Operators](#boolean-operators)
 
 ---
 
@@ -40,5 +41,21 @@ true      # boolean (are also atoms, is_atom(true) -> true)
 10/3      # division (always return a float)
 div(10,2) # integer division
 rem(10,3) # modulo (division remainder)
+```
+[back to top](#table-of-contents)
+
+---
+
+### Boolean Operators
+```elixir
+# Operatos that accepts arguments of any type
+false || true   # Or operator
+false && true   # And operator
+!true           # Non-strict not
+
+# Operators whose first argument must be a boolean
+true and 10     # And operator
+true or false   # Or operator
+not false       # Not operator
 ```
 [back to top](#table-of-contents)
