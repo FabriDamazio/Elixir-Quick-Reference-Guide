@@ -12,7 +12,7 @@ Elixir through code samples
 
 ### Hello World
 ```elixir
-"Hello World"
+IO.puts "Hello World"
 ```
 [back to top](#table-of-contents)
 
