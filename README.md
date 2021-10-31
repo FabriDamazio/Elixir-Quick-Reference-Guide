@@ -6,6 +6,7 @@ Elixir through code samples
 * [Basic Data Types](#basic-data-types)
 * [Arithmetic Operations](#arithmetic-operations)
 * [Boolean Operators](#boolean-operators)
+* [Comparison Operators](#comparison-operators)
 
 ---
 
@@ -59,3 +60,22 @@ true or false   # Or operator
 not false       # Not operator
 ```
 [back to top](#table-of-contents)
+
+---
+
+### Comparison Operators
+```elixir
+2>1     # Greater than
+1<2     # Less than
+1<=2    # Less than or equal to
+1>=2    # Greater than or equal to
+1==1    # Equal 
+1===1   # Strict equal (for integer and floats)
+1!=1    # Not equal
+1!==1   # Strict not equal (for integer and floats)
+
+# Any two types can be compared. The sort order:
+# number < atom < reference < function < port < pid < tuple < map < list < bitstring
+```
+[back to top](#table-of-contents)
+
