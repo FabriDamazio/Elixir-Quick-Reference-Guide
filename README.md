@@ -8,6 +8,7 @@ Elixir through code samples
 * [Boolean Operators](#boolean-operators)
 * [Comparison Operators](#comparison-operators)
 * [Collections](#collections)
+* [Enum](#enum)
 
 ---
 
@@ -98,6 +99,29 @@ tl [:foo, :bar, :boo]                 # hd function returns the tail ([:bar, :bo
 {1.01, :test, "Hello"}                # tuple
 [{:foo, "bar"}, {:hello, "world"}]    # keyword lists
 map = %{:foo => "foo", :bar => "bar"} # maps
+```
+[back to top](#table-of-contents)
+
+---
+
+### Enum
+```elixir
+Enum.all?(["foo", "bar"], fn(s) -> String.length(s) > 1 end)    # the entire collection must evaluate to true otherwise false will be returned
+Enum.any?(["foo", "bar"], fn(s) -> String.length(s) == 1 end)   # return true if at least one item evaluates to true
+Enum.chunk_every([1, 2, 3, 4, 5, 6], 2)                         # break a collection up into smaller groups
+Enum.chunk_by(["a", "b", "ab"], fn(x) -> String.length(x) end)  # group a collection based on a condition
+Enum.map_every([1, 2, 3, 4], 2, fn x -> x + 1000 end)           # apply function every x items
+Enum.each(["one", "two", "three"], fn(s) -> IO.puts(s) end)     # iterate over a collection without producing a new value
+Enum.map([0, 1, 2, 3], fn(x) -> x - 1 end)                      # apply a function to each item and produce a new collection
+Enum.min([1, 2, 3, -1])                                         # finds the minimal value
+Enum.max([1, 2, 3, -1])                                         # finds the maximal value
+Enum.filter([1, 2, 3, 4], fn(x) -> rem(x, 2) == 0 end)          # filter based on a condition
+Enum.reduce([1, 2, 3], fn(x, acc) -> x + acc end)               # distill a collection down into a single value
+Enum.sort([5, 6, 1, 3, -1, 4])                                  # sorting a collection using Erlang term comparison
+Enum.sort([2, 3, 1], :desc)                                     # sorting a collection descending
+Enum.sort([2, 3, 1], :asc)                                      # sorting a collection ascending
+Enum.uniq([1, 2, 3, 2, 1, 1, 1, 1, 1])                          # remove duplicates
+Enum.uniq_by([%{x: 1, y: 1}, %{x: 2, y: 1}], fn z -> z.y end)   # remove duplicates based on a condition
 ```
 [back to top](#table-of-contents)
 
