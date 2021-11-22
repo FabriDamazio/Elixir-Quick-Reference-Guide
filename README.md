@@ -9,6 +9,7 @@ Elixir through code samples
 * [Comparison Operators](#comparison-operators)
 * [Collections](#collections)
 * [Enum](#enum)
+* [Pattern Matching](#patterm-matching)
 
 ---
 
@@ -122,6 +123,32 @@ Enum.sort([2, 3, 1], :desc)                                     # sorting a coll
 Enum.sort([2, 3, 1], :asc)                                      # sorting a collection ascending
 Enum.uniq([1, 2, 3, 2, 1, 1, 1, 1, 1])                          # remove duplicates
 Enum.uniq_by([%{x: 1, y: 1}, %{x: 2, y: 1}], fn z -> z.y end)   # remove duplicates based on a condition
+```
+[back to top](#table-of-contents)
+
+---
+
+### Pattern Matching
+```elixir
+# match the values on the left hand with the values on the right hand. If the match succeeds, it returns the value of the equation
+# the match operator performs assignment when the left side of the match includes a variable. 
+x = 1                 # returns 1
+1 = x                 # returns 1
+2 = x                 # ** (MatchError) no match of right hand side value: 1
+
+#  In some cases this variable rebinding behavior is undesirable. For these situations we have the pin operator: ^
+x = 1                 # returns 1
+^x = 2                # ** (MatchError) no match of right hand side value: 2
+
+# pattern matching on lists
+list = [1, 2, 3]      # returns [1, 2, 3]
+[1, 2, 3] = list      # returns [1, 2, 3]
+[1 | tail] = list     # returns [1, 2, 3] and assign [2, 3] to tail
+
+# pattern matching on tuples
+tuple = {:ok, 123}    # returns {:ok, 123}
+{:ok, 123} = tuple    # returns {:ok, 123}
+{:ok, value} = tuple  # returns {:ok, 123} and assign 123 to value
 ```
 [back to top](#table-of-contents)
 
